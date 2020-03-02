@@ -67,12 +67,15 @@ npm install --save-dev eslint-plugin-prettier prettier eslint-config-react-app e
 請將以下的設定加到你的 VSCode 使用者設定之中(選單->喜好設定)：
 
 ```json
-  "editor.formatOnSave": true,
-  "[javascript]": {
-    "editor.formatOnSave": false
-  },
-  "prettier.disableLanguages": ["js"],
-  "eslint.autoFixOnSave": true,
-  "eslint.alwaysShowStatus": true,
-  "files.autoSave": "afterDelay",
+    "editor.formatOnSave": true,
+    "[javascript]": {
+        "editor.formatOnSave": false
+    },
+    "prettier.disableLanguages": [
+        "js"
+    ],
+    "eslint.alwaysShowStatus": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
 ```

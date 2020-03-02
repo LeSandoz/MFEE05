@@ -12,6 +12,7 @@ class App extends React.Component {
   render() {
     return (
       <>
+        {/* sendText屬性是一個函式 */}
         <TextInput
           sendText={text => {
             //傳入text，然後回設定父母元件的state值

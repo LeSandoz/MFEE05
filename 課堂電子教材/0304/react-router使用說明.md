@@ -29,6 +29,8 @@ Router元件直接由React Router模組導入，一般都是使用BrowserRouter�
 ```js
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
 import React from 'react'
+import Home from './pages/Home'
+import About from './pages/About'
 
 function BasicExample() {
   return (
@@ -52,6 +54,8 @@ function BasicExample() {
 ```js
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
 import React from 'react'
+import Home from './pages/Home'
+import About from './pages/About'
 
 function BasicExample() {
   return (
@@ -184,13 +188,13 @@ npm install -S react-router-bootstrap
 
 原本的元件:
 
-```
+```jsx
 <Button href="/foo/bar">Foo</Button>
 ```
 
 改為:
 
-```
+```jsx
 <LinkContainer to="/foo/bar">
   <Button>Foo</Button>
 </LinkContainer>

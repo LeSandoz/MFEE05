@@ -103,6 +103,7 @@ react-icons支援了6種免費(商業授權也免費)的圖示，使用上非常
 首先在已安裝好的專案程式碼檔案上引入，然後在JSX語法中作為元件來使用即可，如下面的程式碼範例：
 
 ```js
+import React from 'react'
 import { FaReact } from 'react-icons/fa'
 import { Button } from 'react-bootstrap'
 

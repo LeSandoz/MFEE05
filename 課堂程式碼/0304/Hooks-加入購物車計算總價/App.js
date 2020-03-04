@@ -14,9 +14,9 @@ function App(props) {
   const [cart, setCart] = useState([])
   const [totalPrice, setTotalPrice] = useState(0)
 
-  // 與componentDidMount相等的勾子寫法
+  // 勾子寫法
   useEffect(() => {
-    // Your code here
+    // 模擬從伺服器載入資料，按reload重新載入資料
     const data = getDataFromServer()
     setTimeout(() => {
       setProducts(data)
@@ -26,7 +26,7 @@ function App(props) {
   }, [reload])
 
   useEffect(() => {
-    // Your code here
+    // 購物車有改變會重新計算
     let total = 0
     for (let i = 0; i < cart.length; i++) {
       total += cart[i].price
@@ -39,7 +39,8 @@ function App(props) {
     setDataHasLoaded(false)
     setReload(!reload)
   }
-
+  
+// 處理加入購物車
   const addToCart = value => {
     const newCart = [...cart, value]
     setCart(newCart)

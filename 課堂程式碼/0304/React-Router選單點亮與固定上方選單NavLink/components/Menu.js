@@ -22,6 +22,7 @@ function Menu() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
+			{/* 特別注意：要加上exact屬性 */}
               <NavLink
                 exact
                 activeClassName="active"

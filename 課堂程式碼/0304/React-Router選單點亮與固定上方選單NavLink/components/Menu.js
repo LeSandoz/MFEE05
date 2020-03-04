@@ -22,7 +22,7 @@ function Menu() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-			{/* 特別注意：要加上exact屬性 */}
+			{/* 特別注意：要加上exact屬性，首頁的樣式才會正常被套用，不然就會一直有被按到的樣式 */}
               <NavLink
                 exact
                 activeClassName="active"

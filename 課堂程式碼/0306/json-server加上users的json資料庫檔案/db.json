@@ -1,0 +1,28 @@
+{
+  "counter": [
+    {
+      "id": 1,
+      "total": 0
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "張小花",
+      "username": "f123",
+      "password": "12345"
+    },
+    {
+      "id": 2,
+      "name": "陳三三",
+      "username": "c123",
+      "password": "56789"
+    },
+    {
+      "name": "李查查",
+      "username": "l123",
+      "password": "12345",
+      "id": 4
+    }
+  ]
+}

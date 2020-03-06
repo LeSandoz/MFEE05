@@ -6,8 +6,9 @@ function App() {
 
   async function getTotalFromServer() {
     // 開啟載入指示
-    //setDataLoading(true)
+    setDataLoading(true)
 
+    // 注意資料格式要設定，伺服器才知道是json格式
     const request = new Request('http://localhost:5555/counter/1', {
       method: 'GET',
       headers: new Headers({
@@ -24,9 +25,11 @@ function App() {
 
   async function updateTotalToSever(value) {
     // 開啟載入指示
-    //setDataLoading(true)
+    setDataLoading(true)
 
     const newTotal = { total: total + value }
+
+    // 注意資料格式要設定，伺服器才知道是json格式
     const request = new Request('http://localhost:5555/counter/1', {
       method: 'PUT',
       body: JSON.stringify(newTotal),
@@ -53,8 +56,8 @@ function App() {
   // 每次total資料有變動就會3秒後關掉載入指示
   useEffect(() => {
     setTimeout(() => {
-      //setDataLoading(false)
-    }, 1000)
+      setDataLoading(false)
+    }, 500)
   }, [total])
 
   const loading = (

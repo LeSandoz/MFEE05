@@ -5,6 +5,7 @@
 export const addValue = value => ({ type: 'ADD_VALUE', value: value })
 export const minusValue = value => ({ type: 'MINUS_VALUE', value: value })
 
+// 模擬與伺服器相連
 export const addValueAsync = value => {
   return dispatch => {
     setTimeout(() => {

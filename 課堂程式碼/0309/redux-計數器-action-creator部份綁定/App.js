@@ -1,8 +1,12 @@
 import React from 'react'
 // 導入高階元件的方法
 import { connect } from 'react-redux'
+
+// 全部綁定action creators
 // 導入所有的action creators變成一個物件值
 //import * as actionCreators from './actions/index'
+
+// 部份綁定action creators
 import { bindActionCreators } from 'redux'
 import { addValue } from './actions/index'
 
@@ -47,6 +51,7 @@ const mapStateToProps = store => {
 
 // const mapDispatchToProps = null
 
+// 指示dispatch要綁定哪些action creators
 const mapDispatchToProps = dispatch => {
   return bindActionCreators({ addValue }, dispatch)
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 // 導入高階元件的方法
 import { connect } from 'react-redux'
+// 導入所有的action creators變成一個物件值
 import * as actionCreators from './actions/index'
 
 function App(props) {
@@ -12,6 +13,7 @@ function App(props) {
       <h1>{props.total}</h1>
       <button
         onClick={() => {
+          // 使用時直接套用action creator，會幫忙建立action物件與dispatch
           props.addValue(1)
         }}
       >
@@ -50,4 +52,5 @@ const mapStateToProps = store => {
 // const mapDispatchToProps = null
 
 // 高階元件的套用
+// 第二個參數用actionCreators
 export default connect(mapStateToProps, actionCreators)(App)

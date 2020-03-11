@@ -1,0 +1,10 @@
+// import starting from the src/ folder
+@import 'variables.scss';
+
+// can also be relative import
+// @import "./variables.scss";
+
+h1 {
+  color: $primaryColor;
+  font-size: $bitFontSize;
+}

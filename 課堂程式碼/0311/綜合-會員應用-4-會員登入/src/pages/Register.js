@@ -3,6 +3,7 @@ import Banner from '../components/Banner'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { userRegisterAsync } from '../actions/index'
+import { withRouter } from 'react-router-dom'
 
 function Register(props) {
   console.log(props.isAuth)
@@ -168,4 +169,6 @@ const mapDispatchToProps = dispatch => {
   return bindActionCreators({ userRegisterAsync }, dispatch)
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Register)
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(Register)
+)

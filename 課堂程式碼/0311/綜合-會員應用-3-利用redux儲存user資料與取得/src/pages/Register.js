@@ -70,9 +70,18 @@ function Register(props) {
   return (
     <>
       <>
+        {props.isAuth ? (
+          <>
+            <div className="alert alert-danger" role="alert">
+              你已經是登入中了
+            </div>
+          </>
+        ) : (
+          ''
+        )}
         {error ? (
           <>
-            <div class="alert alert-danger" role="alert">
+            <div className="alert alert-danger" role="alert">
               {errorMessages.map((v, i) => (
                 <p key={i}>{v}</p>
               ))}
